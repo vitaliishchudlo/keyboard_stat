@@ -16,20 +16,21 @@ class MainFunc:
         if e.event_type == 'down':
             tm_now = str(datetime.datetime.now().time())[:-10]
 
+
             if self.tm != tm_now:
                 self.tm = tm_now
                 self.dir.append(res)
-                print('Zapros bd')
-                print(self.dir)
-                item = 'a'
-                if item in self.dir:
-                    print('PISKA')
+                            # print('Zapros bd')
+                            # print(self.dir)
+                            # item = 'a'
+                            # if item in self.dir:
+                            #     print('PISKA')
                 self.dir.clear()
             else:
                 self.dir.append(res)
-                print(self.dir)
-                print(res)
-                print("время не меняется")
+                            # print(self.dir)
+                            # print(res)
+                            # print("время не меняется")
 
 
 if __name__ == '__main__':
