@@ -26,7 +26,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../geoguessr_bot" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
@@ -75,7 +75,10 @@
       <workItem from="1620932590799" duration="1923000" />
       <workItem from="1620942138690" duration="2626000" />
       <workItem from="1620947851211" duration="457000" />
-      <workItem from="1620983198175" duration="1591000" />
+      <workItem from="1620983198175" duration="2088000" />
+      <workItem from="1620998351921" duration="3754000" />
+      <workItem from="1621026888988" duration="84000" />
+      <workItem from="1622125560873" duration="1682000" />
     </task>
     <servers />
   </component>
@@ -91,30 +94,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1613567824325" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1613568017561">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1621026972769">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1613568017561" />
-    <state width="1342" height="195" key="GridCell.Tab.0.bottom" timestamp="1613568074431">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1621026972769" />
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1621002588747">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824/-1280.-413.1280.984@0.0.1536.824" timestamp="1621002588747" />
     <state width="1342" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613568074431" />
-    <state width="1342" height="195" key="GridCell.Tab.0.center" timestamp="1613568074430">
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1621002588747">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824/-1280.-413.1280.984@0.0.1536.824" timestamp="1621002588747" />
     <state width="1342" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613568074430" />
-    <state width="1342" height="195" key="GridCell.Tab.0.left" timestamp="1613568074430">
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1621002588747">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824/-1280.-413.1280.984@0.0.1536.824" timestamp="1621002588747" />
     <state width="1342" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613568074430" />
-    <state width="1342" height="195" key="GridCell.Tab.0.right" timestamp="1613568074431">
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1621002588747">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824/-1280.-413.1280.984@0.0.1536.824" timestamp="1621002588747" />
     <state width="1342" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613568074431" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1621002588747">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824/-1280.-413.1280.984@0.0.1536.824" timestamp="1621002588747" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1621002588747">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824/-1280.-413.1280.984@0.0.1536.824" timestamp="1621002588747" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1621002588747">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824/-1280.-413.1280.984@0.0.1536.824" timestamp="1621002588747" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1621002588747">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824/-1280.-413.1280.984@0.0.1536.824" timestamp="1621002588747" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1614019282400">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1614019282400" />
+    <state x="322" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1621002470567">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="322" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824/-1280.-413.1280.984@0.0.1536.824" timestamp="1621002470567" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1620947862354">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -122,5 +149,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/keyboard_stat$Python39.coverage" NAME="main Coverage Results" MODIFIED="1613567826283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/keyboard_stat$main.coverage" NAME="main Coverage Results" MODIFIED="1621002411975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
