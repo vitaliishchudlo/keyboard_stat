@@ -12,25 +12,3 @@
 #
 # print('\n\n')
 # print(res)
-
-
-import requests, time
-import plyer
-
-url = 'http://au.nung.edu.ua/index.php?subj=85'
-
-request1 = requests.get(url)
-result1 = request1.text
-
-while True:
-        url2 = 'http://au.nung.edu.ua/index.php?subj=85'
-        request2 = requests.get(url2)
-        result2 = request2.text
-        if result1 == result2:
-                print('The test is busy!')
-                time.sleep(1.3)
-        else:
-                print('The test is free!\n\nЙДИ ПРОХОДИ')
-
-                time.sleep(0.3)
-

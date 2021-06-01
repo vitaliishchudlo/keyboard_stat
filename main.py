@@ -6,6 +6,7 @@ import time
 import pendulum
 import pymysql
 
+
 class App():
     def __init__(self):
         self.kill_send_info = False
@@ -38,7 +39,7 @@ class App():
 
     def send_data(self):
         if self.kill_send_info == False:
-            print(f'Saving data to server!')
+            # print(f'Saving data to server!')
 
 
 
@@ -59,7 +60,7 @@ class App():
                     sys.exit()
                 else:
                     date = pendulum.now()
-                    print(f'Flags are working [{date.hour}:{date.minute}:{date.second}]')
+                    # print(f'Flags are working [{date.hour}:{date.minute}:{date.second}]')
                     time.sleep(5)
                     self.check_params()
         except Exception as err:
