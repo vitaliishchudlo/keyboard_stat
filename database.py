@@ -8,25 +8,13 @@ connection = pymysql.connect(
     password=''
 )
 cursor = connection.cursor()
-x = {
-    "name": "Viktor",
-    "age": {
-        'main': 30,
-        'second': 12
-    },
-    "city": "Minsk"
-}
 
-j = json.dumps(x)
+def get_from_db(user_id):
+    pass
 
-d = 'da'
+def information_operations():
+    pass
 
-sql = 'INSERT INTO user_data(login, password) VALUES (%s, %s)'
-val = (x, d)
+def send_data():
+    pass
 
-print(cursor.execute(sql, val))
-
-
-print(j)
-
-connection.commit()

