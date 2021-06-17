@@ -26,7 +26,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../geoguessr_bot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
@@ -91,6 +91,15 @@
       <workItem from="1622711720402" duration="455000" />
       <workItem from="1622794026508" duration="1762000" />
       <workItem from="1622817968962" duration="15427000" />
+      <workItem from="1622962547194" duration="1741000" />
+      <workItem from="1623057757649" duration="1934000" />
+      <workItem from="1623256635123" duration="339000" />
+      <workItem from="1623257013751" duration="2487000" />
+      <workItem from="1623270406813" duration="1828000" />
+      <workItem from="1623313484921" duration="6900000" />
+      <workItem from="1623430540651" duration="7160000" />
+      <workItem from="1623495473748" duration="5570000" />
+      <workItem from="1623578572935" duration="1132000" />
     </task>
     <servers />
   </component>
@@ -138,11 +147,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="322" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824/-1280.-413.1280.984@0.0.1536.824" timestamp="1621002470567" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1622831222867">
+    <state x="266" y="160" width="672" height="678" key="search.everywhere.popup" timestamp="1623320092884">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1280.-413.1280.984@0.0.1536.824" timestamp="1622831222867" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1620947862354" />
+    <state x="266" y="160" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1280.-413.1280.984@0.0.1536.824" timestamp="1623320092884" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1623270790862" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/keyboard_stat$Python39.coverage" NAME="main Coverage Results" MODIFIED="1613567826283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
