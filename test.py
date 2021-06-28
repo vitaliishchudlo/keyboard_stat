@@ -7,7 +7,6 @@
 
 # res = dict((i, arr2.count(i)) for i in arr2)
 # print(len(res))
-#
 # print('\n\n')
 # print(res)
 
@@ -38,6 +37,7 @@
 # print([dic.get(n, n) for n in a]
 
 #104 znaku
+
 import json
 import pymysql
 
@@ -175,7 +175,7 @@ result = cursor.execute(sql, val)
 connection.commit()
 
 print(result)
-print('\\')
+
 # import pymysql
 #
 # connection = pymysql.connect(
@@ -184,7 +184,8 @@ print('\\')
 #     database='JrsFeohzhH',
 #     password='f9Sex6J7vk'
 # )
-#
+
+
 a = {
     'special': {
         'esc': 0,
@@ -303,9 +304,3 @@ a = {
         'numpad_num lock': 0
     }
 }
-
-
-
-
-
-
